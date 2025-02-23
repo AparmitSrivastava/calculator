@@ -10,6 +10,11 @@ function appendval(val) {
     if ("+-x/*%".includes(lastChar) && "+x/*%".includes(val)) {
         return
     }
+
+    if (val === "." && lastChar === ".") {
+        return;
+    }
+
     disp.value += val;
 }
 
@@ -31,3 +36,25 @@ function calc() {
     disp.value = "Error"
    }
 }
+
+
+// Adding keyboard support
+function keyboard(e){
+    const key = e.key;
+
+    if(!isNaN(key) || "+-x/.".includes(key)){
+        appendval(key)
+    }
+    else if(key === "Enter"){
+        e.preventDefault(); // prevents submission by mistake 
+        calc();
+    }
+    else if(key === "Backspace"){
+        backspace()
+    }
+    else if(key === "Escape"){
+        clearAll();
+    }
+}
+
+document.addEventListener("keydown" , keyboard);
