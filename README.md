@@ -1,2 +1,2 @@
 # calculator
-This is basic Calculator Application, as my first mini project to practice my basics . I was not sure how would I do it but did it...
+This is my first mini project—a basic calculator application—to practice my fundamentals. I wasn’t sure how I would do it, but I made it happen! lets GOOOO
