@@ -56,5 +56,5 @@ function keyboard(e){
         clearAll();
     }
 }
-
+// target the whole doc
 document.addEventListener("keydown" , keyboard);
