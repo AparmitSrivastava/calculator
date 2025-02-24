@@ -1,7 +1,7 @@
 let btnAdd = document.getElementsByClassName("av")
-let btnClr = document.querySelector("ca")
-let btnBack = document.querySelector("bs")
-let btnCal = document.querySelector("cal")
+let btnClr = document.querySelector(".ca")
+let btnBack = document.querySelector(".bs")
+let btnCal = document.querySelector(".cal")
 
 Array.from(btnAdd).forEach(e=>{
     e.addEventListener("click" , function(){
@@ -10,15 +10,15 @@ Array.from(btnAdd).forEach(e=>{
 })
 
 btnClr.addEventListener("click" , function(){
-    clearAll(this.textContent)
+    clearAll()
 })
 
 btnBack.addEventListener("click" , function(){
-    backspace(this.textContent)
+    backspace()
 })
 
 btnCal.addEventListener("click" , function(){
-    calc(this.textContent)
+    calc()
 })
 
 function appendval(val) {
