@@ -81,3 +81,26 @@ function keyboard(e){
 }
 // target the whole doc
 document.addEventListener("keydown" , keyboard);
+
+
+
+function animatebtn(btn){
+    if(!btn) return
+    btn.classList.add("pressed")
+    setTimeout(()=>{
+        btn.classList.remove("pressed")
+    },100)
+}
+
+document.querySelectorAll(".calcbtn").forEach(e=>{
+    e.addEventListener("click" , function(){
+        animatebtn(this)
+    })
+})
+
+document.addEventListener("keydown" , function(e){
+    let b = document.getElementById(e.key)
+    if(b){
+        animatebtn(b)
+    }
+})

@@ -66,3 +66,12 @@ button:hover{
     background-color: rgb(129, 126, 126);
     cursor: pointer;
 }
+
+button {
+    transition: transform 0.01s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+button:active, .pressed {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
