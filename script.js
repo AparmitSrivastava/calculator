@@ -1,3 +1,26 @@
+let btnAdd = document.getElementsByClassName("av")
+let btnClr = document.querySelector("ca")
+let btnBack = document.querySelector("bs")
+let btnCal = document.querySelector("cal")
+
+Array.from(btnAdd).forEach(e=>{
+    e.addEventListener("click" , function(){
+        appendval(this.textContent)  //"this" correctly refers to the clicked button ,, e still refers to the last button in the loop, not the one clicked.
+    })
+})
+
+btnClr.addEventListener("click" , function(){
+    clearAll(this.textContent)
+})
+
+btnBack.addEventListener("click" , function(){
+    backspace(this.textContent)
+})
+
+btnCal.addEventListener("click" , function(){
+    calc(this.textContent)
+})
+
 function appendval(val) {
     let disp = document.getElementById('display');
     let lastChar = disp.value.slice(-1); // Get the last character
