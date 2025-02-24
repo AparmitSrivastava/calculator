@@ -83,7 +83,7 @@ function keyboard(e){
 document.addEventListener("keydown" , keyboard);
 
 
-
+// animation func
 function animatebtn(btn){
     if(!btn) return
     btn.classList.add("pressed")
@@ -92,12 +92,14 @@ function animatebtn(btn){
     },100)
 }
 
+// Mouse Click Animation
 document.querySelectorAll(".calcbtn").forEach(e=>{
     e.addEventListener("click" , function(){
         animatebtn(this)
     })
 })
 
+// Keyboard Press Animation
 document.addEventListener("keydown" , function(e){
     let b = document.getElementById(e.key)
     if(b){
